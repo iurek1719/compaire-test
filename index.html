@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compaire Broker Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./style.scss" rel="stylesheet">
+
 </head>
 <body class="bg-gray-100">
     <header class="bg-blue-900 text-white py-4">
@@ -14,6 +16,10 @@
     </header>
 
     <main class="container mx-auto mt-8 p-4 bg-white shadow-md">
+
+        <div id="loading-spinner" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75">
+            <div class="loader ease-linear rounded-full border-8 border-t-8  h-32 w-32"></div>
+        </div>
         <div class="flex items-center mb-8">
             <img class="w-32 h-32 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Profile Image">
             <div>

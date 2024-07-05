@@ -3,6 +3,9 @@ const apiKey = 'patKw9UMq2VUijzUK.e190422da0b9c4e3c2a81769060dc83442857b2501bd34
 const url = 'https://api.airtable.com/v0/appffEzv2epXU7OX7/tbluhJUTTuBa3DlP0/rec38MC19Mxw2Gvbl';
 
 window.onload = function(){
+    const loadingSpinner = document.getElementById('loading-spinner');
+    loadingSpinner.style.display = 'flex';
+
 axios.get(url, {
     headers: {
         'Authorization': `Bearer ${apiKey}`
@@ -23,5 +26,7 @@ axios.get(url, {
         `;
         skillsTable.appendChild(row);
     });
-})
+})  .finally(() => {
+    loadingSpinner.style.display = 'none';
+});
 }
