@@ -11,6 +11,7 @@ axios.get(url, {
     }
 }).then(response =>{
 
+    
     document.getElementById('broker-name').textContent = response.data.fields["Last Modified By"].name;
     document.getElementById('broker-email').textContent = response.data.fields["Last Modified By"].email;
     document.getElementById('position').textContent = response.data.fields["PositionName"];
