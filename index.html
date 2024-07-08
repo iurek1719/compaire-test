@@ -30,12 +30,17 @@
             <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-center mb-8">
-            <img id="profile-image" class="w-32 h-32 rounded-full mr-4" src="./broker1.png" alt="Profile Image">
-            <div>
-                <h2 id="broker-name" class="text-2xl font-bold">Broker Name</h2>
-                <p class="text-gray-700">Email: <span id="broker-email"></span></p>
-                <p class="text-gray-700">Position: <span id="position"></span></p>
+        <div class="flex flex-col lg:flex-row items-center justify-between mb-8">
+            <div class="flex items-center">
+                <img id="profile-image" class="w-32 h-32 rounded-full mr-4" src="./broker1.png" alt="Profile Image">
+                <div>
+                    <h2 id="broker-name" class="text-2xl font-bold">Broker Name</h2>
+                    <p class="text-gray-700">Email: <span id="broker-email"></span></p>
+                    <p class="text-gray-700">Position: <span id="position"></span></p>
+                </div>
+            </div>
+            <div class="mt-8 lg:mt-0">
+                <button id="submit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Confirm</button>
             </div>
         </div>
 
@@ -113,9 +118,7 @@
         </section>
        
 
-        <div class="text-center mt-8">
-            <button id="submit-button" class="button text-white py-2 px-4 rounded">Submit</button>
-        </div>
+ 
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
