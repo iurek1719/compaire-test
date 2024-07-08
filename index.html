@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compaire Broker Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="./style.scss" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .loader {
+            border-top-color: #3498db;
+            animation: spin 1s linear infinite;
+        }
 
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-900 text-white py-4">
-        <div class="container mx-auto text-center">
-            <h1  class="text-3xl font-bold">Broker Profile</h1>
+<body class="">
+    <header class="text-white py-4 header">
+        <div class="container ml-5 mx-px">
+            <h1 class="text-3xl font-bold">Broker Profile</h1>
         </div>
     </header>
 
-    <main class="container mx-auto mt-8 p-4 bg-white shadow-md">
+    <main class="container mx-auto mt-8 p-4 bg-white shadow-md relative">
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75">
+            <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
+        </div>
 
-    
-        <div class="flex items-center mb-8">
-            <img class="w-32 h-32 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Profile Image">
+        <div class="flex flex-col lg:flex-row items-center mb-8">
+            <img id="profile-image" class="w-32 h-32 rounded-full mr-4" src="./broker1.png" alt="Profile Image">
             <div>
                 <h2 id="broker-name" class="text-2xl font-bold">Broker Name</h2>
                 <p class="text-gray-700">Email: <span id="broker-email"></span></p>
@@ -27,24 +39,86 @@
             </div>
         </div>
 
-        <section>
+        <div class="flex flex-col lg:flex-row mb-8">
+            <!-- About Section -->
+            <div class="w-full lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
+                <section class="mb-8">
+                    <h3 class="text-xl font-bold mb-2">About</h3>
+                    <p class="mt-4"><span class="font-bold">Location:</span> <span id="location">San Francisco, United States</span></p>
+                    <p><span class="font-bold">Type:</span> <span id="type">Engineering</span></p>
+                    <p><span class="font-bold">Followers:</span> <span id="followers">1,387</span></p>
+                </section>
+            </div>
+
+            <!-- Highlights Section -->
+            <div class="w-full lg:w-1/2 lg:pl-4">
+                <section class="mb-8">
+                    <h3 class="text-xl font-bold mb-2">Highlights</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white-100 p-4 rounded border-2 rounded-lg  shadow-md text-center">
+                            <p class="font-bold">Github</p>
+                            <p class="text-blue-700">Login for link</p>
+                        </div>
+                        <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
+                            <p class="font-bold">Contacts</p>
+                            <p class="text-blue-700">205</p>
+                        </div>
+                        <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
+                            <p class="font-bold">Projects</p>
+                            <p class="text-blue-700">8</p>
+                        </div>
+                        <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
+                            <p class="font-bold">Developers</p>
+                            <p class="text-blue-700">22</p>
+                        </div>
+                        <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
+                            <p class="font-bold">Similar Companies</p>
+                            <p class="text-blue-700">132</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Skills Table -->
+        <!-- <section class="mb-8">
+            <h3 class="text-xl font-bold mb-2 text-center">Skills</h3>
             <table class="min-w-full bg-white">
                 <thead>
-                    <tr >
+                    <tr>
                         <th class="py-2 text-center">Skills Tag</th>
                     </tr>
                 </thead>
-                <tbody id="skills-table">
-                    <!-- Skills data will be inserted here -->
+                <tbody id="skills-table" class="text-center">
+                     Skills data will be inserted here -->
                 </tbody>
             </table>
+        </section> 
+
+
+        <section>
+            <h3 class="text-xl font-bold mb-2">Latest</h3>
+            <div class="bg-white-100 p-4 border-2 rounded mb-4">
+                <p class="font-bold">Lorem ipsum dolor sit amet</p>
+                <p class="text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
+            <div class="bg-white-100 p-4 border-2 rounded mb-4">
+                <p class="font-bold">Lorem ipsum dolor sit amet</p>
+                <p class="text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
+            <div class="bg-white-100 p-4 border-2 rounded mb-4">
+                <p class="font-bold">Lorem ipsum dolor sit amet</p>
+                <p class="text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
         </section>
+       
+
         <div class="text-center mt-8">
             <button id="submit-button" class="bg-blue-900 text-white py-2 px-4 rounded">Submit</button>
         </div>
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script  src="./profile.js"></script>
-
+    <script src="./profile.js"></script>
 </body>
 </html>

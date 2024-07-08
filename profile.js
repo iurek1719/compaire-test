@@ -10,20 +10,11 @@ axios.get(url, {
         'Authorization': `Bearer ${apiKey}`
     }
 }).then(response =>{
-    console.log(response)
-    console.log(response.data.fields)
 
     document.getElementById('broker-name').textContent = response.data.fields["Last Modified By"].name;
     document.getElementById('broker-email').textContent = response.data.fields["Last Modified By"].email;
     document.getElementById('position').textContent = response.data.fields["PositionName"];
+    document.getElementById('loading-spinner').remove();
 
-    const skillsTable = document.getElementById('skills-table');
-    response.data.fields.SkillsTags.forEach(skill => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td class="border px-4 py-2 text-center">${skill}</td>
-        `;
-        skillsTable.appendChild(row);
-    });
-}) 
+})
 }
