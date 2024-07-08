@@ -1,7 +1,10 @@
 body{
     background-color: #f7f9fcd8;
 }
-
+.button{
+    background-color: #183444 !important;
+ 
+}
 .loader {
     border-top-color: #3498db;
     animation: spin 1s linear infinite;
