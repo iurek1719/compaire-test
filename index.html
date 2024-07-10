@@ -34,14 +34,16 @@
             <div class="flex items-center">
                 <img id="profile-image" class="w-32 h-32 rounded-full mr-4" src="./broker1.png" alt="Profile Image">
                 <div>
-                    <h2 id="broker-name" class="text-2xl font-bold">Broker Name</h2>
-                    <p class="text-gray-700">Email: <span id="broker-email"></span></p>
-                    <p class="text-gray-700">Position: <span id="position"></span></p>
+                    <h2 id="broker-name" class="text-2xl font-bold editable" contenteditable="false">Broker Name</h2>
+                    <p class="text-gray-700">Email: <span id="broker-email" class="editable" contenteditable="false"></span></p>
+                    <p class="text-gray-700">Position: <span id="position" class="editable" contenteditable="false"></span></p>
                 </div>
             </div>
             <div class="mt-8 lg:mt-0">
+                <button id="edit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Edit</button>
                 <button id="submit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Confirm</button>
             </div>
+
         </div>
 
         <div class="flex flex-col lg:flex-row mb-8">
@@ -49,9 +51,9 @@
             <div class="w-full lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
                 <section class="mb-8">
                     <h3 class="text-xl font-bold mb-2">About</h3>
-                    <p class="mt-4"><span class="font-bold">Location:</span> <span id="location">San Francisco, United States</span></p>
-                    <p><span class="font-bold">Type:</span> <span id="type">Engineering</span></p>
-                    <p><span class="font-bold">Followers:</span> <span id="followers">1,387</span></p>
+                    <p class="mt-4"><span class="font-bold">Location:</span> <span id="location" class="editable" contenteditable="false">San Francisco, United States</span></p>
+                    <p><span class="font-bold">Type:</span> <span id="type" class="editable" contenteditable="false">Engineering</span></p>
+                    <p><span class="font-bold">Followers:</span> <span id="followers" class="editable" contenteditable="false">1,387</span></p>
                 </section>
             </div>
 
@@ -59,26 +61,26 @@
             <div class="w-full lg:w-1/2 lg:pl-4">
                 <section class="mb-8">
                     <h3 class="text-xl font-bold mb-2">Highlights</h3>
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-2 gap-4 ">
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg  shadow-md text-center">
                             <p class="font-bold">Github</p>
-                            <p class="text-blue-700">Login for link</p>
+                            <p class="text-blue-700 editable" contenteditable="false">Login for link</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Contacts</p>
-                            <p class="text-blue-700">205</p>
+                            <p class="text-blue-700 editable" contenteditable="false">205</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Projects</p>
-                            <p class="text-blue-700">8</p>
+                            <p class="text-blue-700 editable" contenteditable="false">8</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Developers</p>
-                            <p class="text-blue-700">22</p>
+                            <p class="text-blue-700 editable" contenteditable="false">22</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Similar Companies</p>
-                            <p class="text-blue-700">132</p>
+                            <p class="text-blue-700 editable" contenteditable="false">132</p>
                         </div>
                     </div>
                 </section>
@@ -105,15 +107,15 @@
             <h3 class="text-xl font-bold mb-2">Documents</h3>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                <p class="text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="text-blue-700 editable" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                <p class="text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="text-blue-700 editable" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                <p class="text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="text-blue-700 editable" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
         </section>
        

@@ -18,4 +18,19 @@ axios.get(url, {
     document.getElementById('loading-spinner').remove();
 
 })
+
+document.getElementById('edit-button').addEventListener('click', function(){
+    const editables = document.querySelectorAll('.editable');
+    editables.forEach(el => el.setAttribute('contenteditable', 'true'));
+    document.getElementById('edit-button').classList.add('hidden');
+    document.getElementById('confirm-button').classList.remove('hidden');
+})
+
+document.getElementById('submit-button').addEventListener('click', function() {
+    console.log("DCLICKCKCK")
+    const editables = document.querySelectorAll('.editable');
+    editables.forEach(el => el.setAttribute('contenteditable', 'false'));
+    document.getElementById('edit-button').classList.remove('hidden');
+    document.getElementById('confirm-button').classList.add('hidden');
+});
 }
