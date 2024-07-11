@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compaire Broker Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .loader {
@@ -40,47 +41,68 @@
                 </div>
             </div>
             <div class="mt-8 lg:mt-0">
-                <button id="edit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Edit</button>
                 <button id="submit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Confirm</button>
             </div>
 
         </div>
 
-        <div class="flex flex-col lg:flex-row mb-8">
+        <div class="flex flex-col lg:flex-row mb-8 ">
+
             <!-- About Section -->
-            <div class="w-full lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
+            <div class="w-full lg:w-1/2 lg:pr-4 mb-8 lg:mb-0 relative">
+
                 <section class="mb-8">
-                    <h3 class="text-xl font-bold mb-2">About</h3>
-                    <p class="mt-4"><span class="font-bold">Location:</span> <span id="location" class="editable" contenteditable="false">San Francisco, United States</span></p>
-                    <p><span class="font-bold">Type:</span> <span id="type" class="editable" contenteditable="false">Engineering</span></p>
-                    <p><span class="font-bold">Followers:</span> <span id="followers" class="editable" contenteditable="false">1,387</span></p>
+                      
+                    <h3 class="text-xl font-bold mb-2 flex items-center">
+                        About
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="editSection('about')"  class=" w-5 h-5 cursor-pointer about-pencil">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('about')" class="hidden cursor-pointer check-about about-pencil size-6 w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                        
+                    </h3>
+                    <p class="mt-4"><span class="font-bold">Location:</span> <span id="location" class="editable-about" contenteditable="false">San Francisco, United States</span></p>
+                    <p><span class="font-bold">Type:</span> <span id="type" class="editable-about" contenteditable="false">Engineering</span></p>
+                    <p><span class="font-bold">Followers:</span> <span id="followers" class="editable-about" contenteditable="false">1,387</span></p>
                 </section>
             </div>
 
             <!-- Highlights Section -->
             <div class="w-full lg:w-1/2 lg:pl-4">
-                <section class="mb-8">
-                    <h3 class="text-xl font-bold mb-2">Highlights</h3>
+                <section class="mb-8 relative">
+                    <h3 class="text-xl font-bold mb-2 flex items-center">Highlights
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="editSection('highlight')"  class=" w-5 h-5 cursor-pointer highlight-pencil absolute right-0 top-0">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                        </svg>
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('highlight')" class="hidden cursor-pointer check-highlight absolute right-0 top-0 size-6 w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </h3>
                     <div class="grid grid-cols-2 gap-4 ">
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg  shadow-md text-center">
                             <p class="font-bold">Github</p>
-                            <p class="text-blue-700 editable" contenteditable="false">Login for link</p>
+                            <p class="text-blue-700 editable-highlight" contenteditable="false">Login for link</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Contacts</p>
-                            <p class="text-blue-700 editable" contenteditable="false">205</p>
+                            <p class="text-blue-700 editable-highlight" contenteditable="false">205</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Projects</p>
-                            <p class="text-blue-700 editable" contenteditable="false">8</p>
+                            <p class="text-blue-700 editable-highlight" contenteditable="false">8</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Developers</p>
-                            <p class="text-blue-700 editable" contenteditable="false">22</p>
+                            <p class="text-blue-700 editable-highlight" contenteditable="false">22</p>
                         </div>
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg shadow-md text-center">
                             <p class="font-bold">Similar Companies</p>
-                            <p class="text-blue-700 editable" contenteditable="false">132</p>
+                            <p class="text-blue-700 editable-highlight" contenteditable="false">132</p>
                         </div>
                     </div>
                 </section>
@@ -104,18 +126,27 @@
 
 
         <section>
-            <h3 class="text-xl font-bold mb-2">Documents</h3>
+            <h3 class="text-xl font-bold mb-2 flex items-center relative">Documents
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="editSection('document')"  class=" w-5 h-5 cursor-pointer document-pencil absolute right-0 top-0">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('document')" class="hidden cursor-pointer check-document about-pencil size-6 w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+                
+            </h3>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                <p class="text-blue-700 editable" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="text-blue-700 editable-document" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                <p class="text-blue-700 editable" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="text-blue-700 editable-document" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                <p class="text-blue-700 editable" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="text-blue-700 editable-document" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
         </section>
        

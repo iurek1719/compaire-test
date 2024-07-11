@@ -10,7 +10,6 @@ axios.get(url, {
         'Authorization': `Bearer ${apiKey}`
     }
 }).then(response =>{
-
     
     document.getElementById('broker-name').textContent = response.data.fields["Last Modified By"].name;
     document.getElementById('broker-email').textContent = response.data.fields["Last Modified By"].email;
@@ -27,10 +26,44 @@ document.getElementById('edit-button').addEventListener('click', function(){
 })
 
 document.getElementById('submit-button').addEventListener('click', function() {
-    console.log("DCLICKCKCK")
     const editables = document.querySelectorAll('.editable');
     editables.forEach(el => el.setAttribute('contenteditable', 'false'));
     document.getElementById('edit-button').classList.remove('hidden');
     document.getElementById('confirm-button').classList.add('hidden');
 });
 }
+
+function editSection(sectionPart){
+    const editables = document.querySelectorAll( `.editable-${sectionPart}`);
+    editables.forEach(el => {
+        document.getElementsByClassName(`${sectionPart}-pencil`)[0].classList.add('hidden')
+
+        let checkElement = document.getElementsByClassName(`check-${sectionPart}`)[0];
+        checkElement.classList.remove('hidden');
+        checkElement.classList.add("pencil-margin")
+
+        el.setAttribute('contenteditable', 'true');
+        el.classList.add('underline')
+    
+    });
+    
+}
+
+function finishEditingSection(sectionPart){
+    const editables = document.querySelectorAll( `.editable-${sectionPart}`);
+    console.log(editables)
+    editables.forEach(el => {
+        document.getElementsByClassName(`${sectionPart}-pencil`)[0].classList.remove('hidden')
+
+        let checkElement = document.getElementsByClassName(`check-${sectionPart}`)[0];
+        checkElement.classList.add('hidden');
+        checkElement.classList.add("pencil-margin")
+
+        el.setAttribute('contenteditable', 'false');
+        el.classList.remove('underline')
+    
+    });
+    
+}
+
+

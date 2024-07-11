@@ -17,3 +17,22 @@ body{
 .header{
     background-color: #183444 !important;
 }
+
+
+.about-pencil{
+    margin-left: 15rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-pencil {
+        position: absolute;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .pencil-margin{
+        position: absolute;
+        right: 0 !important;
+        top: 0 !important;
+    }
+}
