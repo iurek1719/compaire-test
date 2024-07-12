@@ -7,16 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .loader {
-            border-top-color: #3498db;
-            animation: spin 1s linear infinite;
-        }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body class="">
     <header class="text-white py-4 header">
@@ -58,14 +49,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="editSection('about')"  class=" w-5 h-5 cursor-pointer about-pencil">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                         </svg>
-
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('about')" class="hidden cursor-pointer check-about about-pencil size-6 w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg> -->
-
-                        <!-- <div class="mt-8 lg:mt-0">
-                            <button id="submit-button" onclick="finishEditingSection('about')" class=" hidden  about-pencil size-4 w-5 h-5 check-about button text-white py-2 px-4 rounded">Confirm</button>
-                        </div> -->
                         <button  onclick="finishEditingSection('about')" class="button text-white text-xs  py-1 px-1  rounded hidden check-about  about-pencil">
                             Done
                           </button>
@@ -116,21 +99,7 @@
             </div>
         </div>
 
-        <!-- Skills Table -->
-        <!-- <section class="mb-8">
-            <h3 class="text-xl font-bold mb-2 text-center">Skills</h3>
-            <table class="min-w-full bg-white">
-                <thead>
-                    <tr>
-                        <th class="py-2 text-center">Skills Tag</th>
-                    </tr>
-                </thead>
-                <tbody id="skills-table" class="text-center">
-                     Skills data will be inserted here -->
-                </tbody>
-            </table>
-        </section> 
- 
+   
           
 
         <section>
