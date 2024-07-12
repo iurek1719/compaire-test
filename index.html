@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="mt-8 lg:mt-0">
-                <button id="submit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Confirm</button>
+                <button id="submit-button" class="button hover:bg-blue-700 text-white py-2 px-4 rounded">Submit Changes</button>
             </div>
 
         </div>
@@ -59,9 +59,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                         </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('about')" class="hidden cursor-pointer check-about about-pencil size-6 w-5 h-5">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('about')" class="hidden cursor-pointer check-about about-pencil size-6 w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
+                        </svg> -->
+
+                        <!-- <div class="mt-8 lg:mt-0">
+                            <button id="submit-button" onclick="finishEditingSection('about')" class=" hidden  about-pencil size-4 w-5 h-5 check-about button text-white py-2 px-4 rounded">Confirm</button>
+                        </div> -->
+                        <button  onclick="finishEditingSection('about')" class="button text-white text-xs  py-1 px-1  rounded hidden check-about  about-pencil">
+                            Done
+                          </button>
                         
                     </h3>
                     <p class="mt-4"><span class="font-bold">Location:</span> <span id="location" class="editable-about" contenteditable="false">San Francisco, United States</span></p>
@@ -79,9 +86,9 @@
                         </svg>
 
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('highlight')" class="hidden cursor-pointer check-highlight absolute right-0 top-0 size-6 w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
+                        <button onclick="finishEditingSection('highlight')" class="button text-white text-xs  py-1 px-1  rounded hidden check-highlight absolute right-0 top-0 ">
+                            Done
+                          </button>
                     </h3>
                     <div class="grid grid-cols-2 gap-4 ">
                         <div class="bg-white-100 p-4 rounded border-2 rounded-lg  shadow-md text-center">
@@ -132,10 +139,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                 </svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" onclick="finishEditingSection('document')" class="hidden cursor-pointer check-document about-pencil size-6 w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
+            
                 
+                <button onclick="finishEditingSection('document')" class="button text-white text-xs  py-1 px-1   rounded hidden  check-document absolute right-0 top-0 ">
+                    Done
+                  </button>
+
+
             </h3>
             <div class="bg-white-100 p-4 border-2 rounded mb-4">
                 <p class="font-bold">Lorem ipsum dolor sit amet</p>

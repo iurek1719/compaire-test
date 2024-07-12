@@ -1,10 +1,11 @@
-body{
+body {
     background-color: #f7f9fcd8;
 }
-.button{
+
+.button, .header {
     background-color: #183444 !important;
- 
 }
+
 .loader {
     border-top-color: #3498db;
     animation: spin 1s linear infinite;
@@ -14,23 +15,16 @@ body{
     to { transform: rotate(360deg); }
 }
 
-.header{
-    background-color: #183444 !important;
-}
-
-
-.about-pencil{
+.about-pencil {
     margin-left: 15rem;
 }
 
-@media screen and (max-width: 1024px) {
-    .about-pencil {
-        position: absolute;
-        right: 0 !important;
-        top: 0 !important;
-    }
+.outline-class {
+    outline: 1px solid grey;
+}
 
-    .pencil-margin{
+@media screen and (max-width: 1024px) {
+    .about-pencil, .pencil-margin {
         position: absolute;
         right: 0 !important;
         top: 0 !important;

@@ -18,13 +18,6 @@ axios.get(url, {
 
 })
 
-document.getElementById('edit-button').addEventListener('click', function(){
-    const editables = document.querySelectorAll('.editable');
-    editables.forEach(el => el.setAttribute('contenteditable', 'true'));
-    document.getElementById('edit-button').classList.add('hidden');
-    document.getElementById('confirm-button').classList.remove('hidden');
-})
-
 document.getElementById('submit-button').addEventListener('click', function() {
     const editables = document.querySelectorAll('.editable');
     editables.forEach(el => el.setAttribute('contenteditable', 'false'));
@@ -35,32 +28,33 @@ document.getElementById('submit-button').addEventListener('click', function() {
 
 function editSection(sectionPart){
     const editables = document.querySelectorAll( `.editable-${sectionPart}`);
+
+    document.getElementsByClassName(`${sectionPart}-pencil`)[0].classList.add('hidden')
+    let checkElement = document.getElementsByClassName(`check-${sectionPart}`)[0];
+    checkElement.classList.remove('hidden');
+    checkElement.classList.add("pencil-margin")
+
+
     editables.forEach(el => {
-        document.getElementsByClassName(`${sectionPart}-pencil`)[0].classList.add('hidden')
-
-        let checkElement = document.getElementsByClassName(`check-${sectionPart}`)[0];
-        checkElement.classList.remove('hidden');
-        checkElement.classList.add("pencil-margin")
-
+   
         el.setAttribute('contenteditable', 'true');
-        el.classList.add('underline')
+        el.classList.add('outline-class')
     
     });
     
 }
 
 function finishEditingSection(sectionPart){
+    let checkElement = document.getElementsByClassName(`check-${sectionPart}`)[0];
+    checkElement.classList.add('hidden');
+    checkElement.classList.add("pencil-margin")
+    document.getElementsByClassName(`${sectionPart}-pencil`)[0].classList.remove('hidden')
+
+
     const editables = document.querySelectorAll( `.editable-${sectionPart}`);
-    console.log(editables)
     editables.forEach(el => {
-        document.getElementsByClassName(`${sectionPart}-pencil`)[0].classList.remove('hidden')
-
-        let checkElement = document.getElementsByClassName(`check-${sectionPart}`)[0];
-        checkElement.classList.add('hidden');
-        checkElement.classList.add("pencil-margin")
-
         el.setAttribute('contenteditable', 'false');
-        el.classList.remove('underline')
+        el.classList.remove('outline-class')
     
     });
     
